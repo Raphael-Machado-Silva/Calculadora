@@ -1,0 +1,28 @@
+div#buttons{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+  grid-template-rows: repeat(5, 1fr);
+}
+.item {
+    grid-column: span 1; /* Cada item ocupa 1 coluna */
+    grid-row: span 1; /* Cada item ocupa 1 linha */
+  }
+  
+  #equal {
+    grid-column: span 1; /* O operador de igual ocupa 1 coluna */
+    grid-row: span 3; /* O operador de igual ocupa 3 linhas */
+  }
+  
+  .item.divide {
+    grid-column: span 1; /* O operador de divisão ocupa 1 coluna */
+    grid-row: span 1; /* O operador de divisão ocupa 1 linha */
+  }
+  button#quatro{
+    grid-column: span 1; /* O número 4 ocupa 1 coluna */
+    grid-row: span 1; /* O número 4 ocupa 1 linha */
+  }
+  button#dois{
+    grid-column: span 1; /* O número 2 ocupa 1 coluna */
+    grid-row: span 1; /* O número 2 ocupa 1 linha */
+  }
