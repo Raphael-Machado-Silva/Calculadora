@@ -10,28 +10,44 @@
 <body>
     <header><h1>Calculadora</h1></header>
     <div id="calculadora">
-        <input type="text" name="result" id="result">
-            <div id="buttons">
-                <button id="somar" onclick="" class= item>+</button>
-                <button id="subtrair" onclick="" class= item>-</button>
-                <button id="multiplicar" onclick="" class= item>x</button>
-                <button id="dividir" onclick="" class="item divide">÷</button>
+        <input type="text" name="result" id="txt1">
+            <form action="" name="Calculator"><div id="buttons">
+                <button id="somar" onclick="displaynum(addbtn.value)" name="addbtn"  class= item value="+" type="button">+</button>
+                <button id="subtrair" onclick="displaynum(menosbtn.value)" name="menosbtn" class= item value="-" type="button">-</button>
+                <button id="multiplicar" onclick="displaynum(multibtn.value)" name="multibtn" class= item value="*" type="button">x</button>
+                <button id="dividir" onclick="displaynum(divbtn.value)" name="divbtn" class="item divide" value="/" type="button">÷</button>
 
-                <button onclick="('7')" class= item>7</button>
-                <button onclick="('8')" class= item>8</button>
-                <button onclick="('9')" class= item>9</button>
-                <button onclick="('4')"  class= item>4</button>
-                <button onclick="('5')" class= item>5</button>
-                <button onclick="('6')" class= item>6</button>
-                <button onclick="('1')"class= item>1</button>
-                <button onclick="('2')" class= item>2</button>
-                <button onclick="('3')"class= item>3</button>
-                <button onclick="('0')"class= item>0</button>
+                <button onclick="displaynum(btn7.value)" name="btn7" class= item value="7" type="button">7</button>
+                <button onclick="displaynum(btn8.value)" name="btn8" class= item value="8" type="button">8</button>
+                <button onclick="displaynum(btn9.value)" name="btn9" class= item value="9" type="button">9</button>
+                <button onclick="displaynum(btn4.value)" name="btn4" class= item value="4" type="button">4</button>
+                <button onclick="displaynum(btn5.value)" name="btn5" class= item value="5" type="button">5</button>
+                <button onclick="displaynum(btn6.value)" name="btn6" class= item value="6" type="button">6</button>
+                <button onclick="displaynum(btn1.value)" name="btn1" class= item value="1" type="button">1</button>
+                <button onclick="displaynum(btn2.value)" name="btn2" class= item value="2" type="button">2</button>
+                <button onclick="displaynum(btn3.value)" name="btn3" class= item value="3" type="button">3</button>
+                <button onclick="displaynum(btn0.value)" name="btn0" class= item value="0" type="button">0</button>
 
-                <button onclick="" class="item">AC</button>
-                <button onclick="" class="item" id="equal">=</button>
+                <button onclick="clearDisplay()" class="item" type="button">AC</button>
+                <button onclick="calculate()" name="submbtn" class="item" id="equal" value="=" type="button">=</button>
 
-            </div>
+            </div> </form>
     </div>
+    <script>
+
+        function displaynum(n1) {
+            document.getElementById('txt1').value += n1;
+        }
+    
+        function clearDisplay() {
+            document.getElementById('txt1').value = "";
+        }
+        function calculate() {
+            var result = eval(document.getElementById('txt1').value);
+            document.getElementById('txt1').value = result;
+    
+        }
+
+    </script>
 </body>
 </html>
