@@ -1,28 +1,38 @@
+body{
+    background-color: #6E7073;
+}
 header{
     margin: auto;
+    margin-top: 200px;
     text-align: center;
-    margin-top: 25%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    font-size: 2em;
+    color: white;
+    text-shadow: 0px 0px 4px black;
 }
 div#calculadora{
+    border: 1px solid black;
+    box-shadow: 0px 0px 7px white;
     background-color: rgb(24, 24, 24);
     border-radius: 20px;
     text-align: center;
     width: 400px;
-    height: 400px;
+    height: 420px;
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
 }
 input#result{
     border-radius: 20px;
-    margin-top: 20px;
-    width: 300px;
-    height: 30px;
+    margin-top: 22px;
+    width: 320px;
+    height: 40px;
     
 }
 div#buttons{
-    padding: 10px;
+    padding: 14px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap: 10px;
@@ -30,9 +40,11 @@ div#buttons{
     height: 300px;
 }
 .item {
+    border: 0px;
+    box-shadow: 0px 0px 5px white;
     cursor: pointer;
     border-radius: 20px;
-    background-color: gray;
+    background-color: rgb(87, 86, 86);
     color: white;
     font-size: 1.5em;
     grid-column: span 1; /* Cada item ocupa 1 coluna */
@@ -41,7 +53,9 @@ div#buttons{
   
   #equal {
     cursor: pointer;
-    background-color: gray;
+    background-color: rgb(83, 83, 83);
+    box-shadow: 0px 0px 5px white;
+    border: 0px;
     color: white;
     font-size: 1.5em;
     border-radius: 20px;
