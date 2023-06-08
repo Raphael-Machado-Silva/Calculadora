@@ -1,28 +1,50 @@
+header{
+    margin: auto;
+    text-align: center;
+    margin-top: 25%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+div#calculadora{
+    background-color: rgb(24, 24, 24);
+    border-radius: 20px;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+input#result{
+    border-radius: 20px;
+    margin-top: 20px;
+    width: 300px;
+    height: 30px;
+    
+}
 div#buttons{
+    padding: 10px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap: 10px;
-  grid-template-rows: repeat(5, 1fr);
+    margin-top: 15px;
+    height: 300px;
 }
 .item {
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: gray;
+    color: white;
+    font-size: 1.5em;
     grid-column: span 1; /* Cada item ocupa 1 coluna */
     grid-row: span 1; /* Cada item ocupa 1 linha */
   }
   
   #equal {
+    cursor: pointer;
+    background-color: gray;
+    color: white;
+    font-size: 1.5em;
+    border-radius: 20px;
     grid-column: span 1; /* O operador de igual ocupa 1 coluna */
-    grid-row: span 3; /* O operador de igual ocupa 3 linhas */
-  }
-  
-  .item.divide {
-    grid-column: span 1; /* O operador de divisão ocupa 1 coluna */
-    grid-row: span 1; /* O operador de divisão ocupa 1 linha */
-  }
-  button#quatro{
-    grid-column: span 1; /* O número 4 ocupa 1 coluna */
-    grid-row: span 1; /* O número 4 ocupa 1 linha */
-  }
-  button#dois{
-    grid-column: span 1; /* O número 2 ocupa 1 coluna */
-    grid-row: span 1; /* O número 2 ocupa 1 linha */
+    grid-row: span 1; /* O operador de igual ocupa 3 linhas */
   }
